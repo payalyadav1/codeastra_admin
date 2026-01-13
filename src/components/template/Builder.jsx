@@ -13,7 +13,7 @@ const Builder = () => {
                 <Sidebar />
                 <div
                     style={{ scrollbarWidth: "none" }}
-                    className='h-screen overflow-y-auto mx-auto w-full px-6'>
+                    className='h-screen overflow-y-auto mx-auto w-full px-6 ml-18 md:ml-0'>
                     <ProjectHeader />
                     <ProjectOverviewCard />
                     <PromptInteractionsCard />

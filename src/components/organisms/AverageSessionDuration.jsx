@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const AverageSessionDuration = () => {
   return (
-    <Card className="w-full max-w-md mx-auto md:max-w-sm lg:max-w-md mt-7 mr-10"> 
+    <Card className="w-full max-w-md mx-auto md:max-w-sm lg:max-w-md mt-7 "> 
       <CardHeader className="pb-2"> 
         <CardTitle className="text-base font-semibold text-gray-900 dark:text-gray-100"> 
           Average Session Duration

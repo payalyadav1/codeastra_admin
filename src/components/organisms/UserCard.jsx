@@ -1,5 +1,4 @@
 import React from "react";
-import {   UserPlus, BarChart2 } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { TbUsersGroup } from "react-icons/tb";

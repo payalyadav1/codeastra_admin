@@ -30,15 +30,12 @@ const ModificationLog = () => {
 
   return (
     <div className="w-full bg-white rounded-xl border border-gray-200 p-5  mt-2 ">
-      {/* Title */}
       <h2 className="text-lg font-bold text-black mb-4 ">
         Modification Log
       </h2>
 
-      {/* Table Wrapper */}
       <div className="overflow-x-auto bg-white rounded-xl border border-gray-200">
         <table className="w-full border-collapse">
-          {/* Table Head */}
           <thead>
             <tr className="bg-gray-50 text-sm text-gray-600">
               <th className="py-3 px-4  font-medium">Date</th>
@@ -50,7 +47,6 @@ const ModificationLog = () => {
             </tr>
           </thead>
 
-          {/* Table Body */}
           <tbody>
             {data.map((item, index) => (
               <tr

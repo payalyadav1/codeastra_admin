@@ -9,11 +9,10 @@ import {
 
 const PlanActionsBar = () => {
   return (
-    <div className=" bg-gray-50 rounded-2xl shadow-md px-4 py-4 ml-10 mr-10 mt-5">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+    <div className="bg-gray-50 rounded-2xl shadow-md px-4 py-4 mx-4 sm:mx-10 mt-5">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         
-        {/* Left Buttons */}
-        <div className="flex flex-wrap gap-3 h-12 mt-2 ">
+        <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
           <ActionButton icon={<Plus size={16} />} text="Add New Plan" />
           <ActionButton icon={<Settings size={16} />} text="Manage Features" />
           <ActionButton icon={<FileText size={16} />} text="View Invoices" />
@@ -21,8 +20,7 @@ const PlanActionsBar = () => {
           <ActionButton icon={<Download size={16} />} text="Export Data" />
         </div>
 
-        {/* Right Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 justify-center sm:justify-end mt-3 sm:mt-0">
           <span className="text-md font-medium text-gray-700">
             AI Insights
           </span>

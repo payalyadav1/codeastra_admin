@@ -14,7 +14,6 @@ const PromptInteractionsCard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Stats Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
             <div className=" p-3 bg-[#f9fafb] rounded-lg  h-25 ">
               <div className="text-md text-gray-500 dark:text-gray-400 ml-2 mt-2">Total Prompts Given</div>
@@ -38,7 +37,6 @@ const PromptInteractionsCard = () => {
             </div>
           </div>
 
-          {/* Recent Chat Snippet Section */}
           <div className=" bg-[#f9fafb] rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900 p-5  ml-5 ">
               Recent Chat Snippet

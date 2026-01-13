@@ -6,6 +6,9 @@ import Builder from './components/template/Builder'
 import Login from './components/template/Login'
 import ForgotPassword from './components/template/ForgotPassword'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AddUserForm from './components/organisms/AddUserForm '
+import Projects from './components/template/Projects'
+import UserManagement from './components/template/UserManagement'
 
 
 const App = () => {
@@ -22,6 +25,10 @@ const App = () => {
           <Route path="/management" element={<Management />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/builder" element={<Builder />} />
+          <Route path="/Addfrom" element={<AddUserForm />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/usermanagement" element={<UserManagement />} />
+     
         </Routes>
       </BrowserRouter>
 

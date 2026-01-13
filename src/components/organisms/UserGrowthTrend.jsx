@@ -30,27 +30,29 @@ const UserGrowthTrend = () => {
     return (
         <Card className="w-full shadow-sm  ">
             <CardHeader className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <CardTitle className="text-base font-semibold">
-                    User Growth Trend
-                </CardTitle>
+    <CardTitle className="text-base font-semibold">
+      User Growth Trend
+    </CardTitle>
 
-                <Tabs defaultValue="growth" className="w-fit ">
-                    <TabsList className="h-10 w-120 bg-[#f3f4f6] rounded-md">
-                        <TabsTrigger value="growth" className="text-xs">
-                            User Growth
-                        </TabsTrigger>
-                        <TabsTrigger value="activity" className="text-xs">
-                            Daily Activity
-                        </TabsTrigger>
-                        <TabsTrigger value="demo" className="text-xs">
-                            Demographics
-                        </TabsTrigger>
-                        <TabsTrigger value="device" className="text-xs">
-                            Devices
-                        </TabsTrigger>
-                    </TabsList>
-                </Tabs>
-            </CardHeader>
+    <div className="w-full sm:w-auto overflow-x-auto">
+      <Tabs defaultValue="growth" className="w-max">
+        <TabsList className="flex gap-1 bg-[#f3f4f6] rounded-md min-w-max">
+          <TabsTrigger value="growth" className="text-xs flex-shrink-0">
+            User Growth
+          </TabsTrigger>
+          <TabsTrigger value="activity" className="text-xs flex-shrink-0">
+            Daily Activity
+          </TabsTrigger>
+          <TabsTrigger value="demo" className="text-xs flex-shrink-0">
+            Demographics
+          </TabsTrigger>
+          <TabsTrigger value="device" className="text-xs flex-shrink-0">
+            Devices
+          </TabsTrigger>
+        </TabsList>
+      </Tabs>
+    </div>
+  </CardHeader>
 
 <CardContent className="h-[260px] sm:h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">

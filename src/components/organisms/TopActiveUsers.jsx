@@ -9,7 +9,7 @@ const TopActiveUsers = () => {
   ];
 
   return (
-    <Card className="w-full max-w-md mx-auto md:max-w-sm lg:max-w-md mt-7 mr-10"> 
+    <Card className="w-full max-w-md mx-auto md:max-w-sm lg:max-w-md mt-7 "> 
       <CardHeader className="pb-3"> 
         <CardTitle className="text-lg font-semibold text-gray-900 dark:text-gray-100">Top Active Users</CardTitle>
       </CardHeader>

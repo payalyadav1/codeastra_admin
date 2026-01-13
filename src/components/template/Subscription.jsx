@@ -9,32 +9,35 @@ import PlanActionsBar from '../organisms/PlanActionsBar '
 
 const Subscription = () => {
   return (
-     <div>
-        <div className="min-h-screen flex bg-white shadow-md   ">
-           <Sidebar />
-             <div   
-                style={{ scrollbarWidth: "none" }}
-                 className='h-screen overflow-y-auto '>
-                  <SubscriptionHeader/>
-                  <SubscriptionMetrics/>
-                  <PricingPlans/>
+    <div>
+      <div className="min-h-screen flex bg-white shadow-md   ">
+        <Sidebar />
+        <div
+          style={{ scrollbarWidth: "none" }}
+          className='h-screen overflow-y-auto w-full ml-18 md:ml-0 '>
+          <SubscriptionHeader />
+          <SubscriptionMetrics />
+          <PricingPlans />
 
-              <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-6 p-4">
-                 <ActiveSubscribersChart/>
-                </div>
-    
-                <div class="col-span-6  p-4">
-                  <RevenueContributionChart/>
-                </div>
-              </div>
-    
-    <PlanActionsBar/>
-          
+
+
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 sm:col-span-6  p-2 w-full px-8 ">
+              <ActiveSubscribersChart />
             </div>
-    
+
+            <div className="col-span-12 sm:col-span-6 p-2 w-full px-8">
+              <RevenueContributionChart />
+            </div>
           </div>
+
+
+          <PlanActionsBar />
+
         </div>
+
+      </div>
+    </div>
   )
 }
 

@@ -23,7 +23,6 @@ const COLORS = ["#10B981", "#7C3AED", "#F97316", "#3B82F6"];
 
 
 
-// Custom label function
 const renderCustomLabel = ({ name, percent }) => {
   return `${name} ${((percent || 0) * 100).toFixed(2)}%`;
 };
@@ -31,7 +30,7 @@ const renderCustomLabel = ({ name, percent }) => {
 
 export default function UserRoleDistribution() {
   return (
-    <Card className="w-full max-w-md h-85">
+    <Card className="w-full  max-w-md h-85">
       <CardHeader>
         <CardTitle>User Role Distribution</CardTitle>
       </CardHeader>
@@ -54,7 +53,6 @@ export default function UserRoleDistribution() {
               ))}
             </Pie>
             <Tooltip />
-            {/* <Legend verticalAlign="bottom" height={36} /> */}
           </PieChart>
         </ResponsiveContainer>
       </CardContent>

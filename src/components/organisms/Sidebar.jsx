@@ -1,195 +1,127 @@
-import React, { useState } from "react";
-import { LogOut, Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-
-import { TiHome } from "react-icons/ti";
-import { FaUsers } from "react-icons/fa6";
-import { TbReportSearch } from "react-icons/tb";
-import { MdContactSupport } from "react-icons/md";
-import { ChartSpline, MailMinus, MessageCircleMore, Settings } from "lucide-react";
-
-import Img from "../../assets/image.png";
+import {
+  HelpCircle,
+  Notebook,
+  Mail,
+  MessageCircle,
+  Home,
+  Users,
+  BarChart2,
+  Settings,
+  LogOut,
+} from "lucide-react";
+import { FaCube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { LayoutDashboard } from "lucide-react";
+import { useState } from "react";
 
-export default function Sidebar() {
-  const [collapse, setCollapse] = useState(false);
+const menuItems = [
+  { key: "dashboard", label: "Dashboard", icon: Home },
+  { key: "management", label: "User", icon: Users },
+  { key: "analytics", label: "Analytics", icon: BarChart2 },
+  { key: "leads", label: "Leads", icon: Mail },
+  { key: "subscription", label: "Reports", icon: Notebook },
+  { key: "builder", label: "Messages", icon: MessageCircle },
+  { key: "settings", label: "Setting", icon: Settings },
+  { key: "support", label: "Support", icon: HelpCircle },
+];
+
+export default function Sidebar({ active }) {
   const navigate = useNavigate();
-
-
-  const SidebarUI = ({ onlyIcon = false }) => (
-    <div className="flex h-screen w-60 flex-col bg-black sticky top-0 left-0 text-white px-3 py-4 z-50">
-
-      <div
-        onClick={() => setCollapse(!collapse)}
-        className="mb-6 flex items-center gap-2 px-2 cursor-pointer"
-      >
-        <div className="h-8 w-8 rounded-md bg-[#a6a7fa] flex items-center justify-center">
-          <LayoutDashboard size={18} className="text-black" />
-        </div>
-
-    
-      </div>
-
-
-      <div className="flex-1 space-y-1">
-         <div
-          onClick={() => navigate("/dashboard")}
-          className="group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer "
-        >
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <TiHome size={22} className="text-gray-200" />
-          </div>
-
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Dashboard
-            </span>
-          )}
-        </div>
-
-
-        <div onClick={() => navigate("/management")}
-          className=" group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer -mt-3 ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <FaUsers size={22} className="text-gray-200" />
-          </div>
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              User
-            </span>
-          )}
-        </div>
-
-
-
-        <div className=" group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <ChartSpline size={22} className="text-gray-200" />
-
-          </div>
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Analytics
-            </span>
-          )}
-
-        </div>
-
-
-
-        <div className=" group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <MailMinus size={22} className="text-gray-200" />
-
-          </div>
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Leads
-            </span>
-          )}
-        </div>
-
-
-        <div onClick={() => navigate("/subscription")}
-          className=" group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <TbReportSearch size={22} className="text-gray-200" />
-
-          </div>
-
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Reports
-            </span>
-          )}
-        </div>
-
-
-
-        <div onClick={() => navigate("/builder")}
-          className=" group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <MessageCircleMore size={22} className="text-gray-200" />
-
-          </div>
-
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Messages
-            </span>
-          )}
-        </div>
-
-        <div className="group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <Settings size={22} className="text-gray-200" />
-
-          </div>
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Setting
-            </span>
-          )}
-        </div>
-
-
-        <div className="group flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ">
-          <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-            <MdContactSupport size={22} className="text-gray-200" />
-
-          </div>
-          {!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-              Support
-            </span>
-          )}
-        </div>
-
-      </div>
-
-      <div className="group  flex items-center gap-3 px-3 py-2 cursor-pointer ">
-                         <div className="p-1.5 rounded-md transition group-hover:bg-transparent hover:bg-[#455983]">
-                                <LogOut size={22} className="text-gray-200"  />
-
-</div>
-{!onlyIcon && (
-            <span className="text-gray-200 transition group-hover:text-white">
-      Log Out   </span>
-          )}
-      </div>
-
-      <div className="mt-4 pt-3">
-        <div className="flex items-center gap-3 px-3">
-          <img src={Img} className="h-8 w-8 rounded-full" />
-          {!onlyIcon && <span className="text-sm">Profile</span>}
-        </div>
-      </div>
-    </div>
-  );
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <div
-        className={`hidden lg:flex h-screen transition-all duration-300 ${collapse ? "w-20" : "w-60"
-          }`}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/50 z-40 sm:hidden"
+        />
+      )}
+
+      <aside
+        className={`
+          bg-black text-white h-screen
+          px-3 py-6 flex flex-col justify-between
+          transition-all duration-300 z-50
+
+          /* Desktop */
+          sm:sticky sm:top-0
+          ${isOpen ? "sm:w-46" : "sm:w-18"}
+
+          /* Mobile Overlay Sidebar */
+          fixed sm:static top-0 left-0
+          ${isOpen ? "w-64" : "w-18"}
+        `}
       >
-        <SidebarUI onlyIcon={collapse} />
-      </div>
+        <div className="space-y-6">
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="bg-[linear-gradient(135deg,_#82AFFF_0%,_#B8A4F9_70.71%)]
+            w-10 h-10 rounded-md flex items-center justify-center
+            mx-auto sm:mx-2 shadow-md cursor-pointer"
+          >
+            <FaCube />
+          </div>
 
-      <div className="lg:hidden p-2">
-        <Sheet>
-          <SheetTrigger asChild>
-            <button className="p-2 border rounded-md">
-              <Menu />
-            </button>
-          </SheetTrigger>
+          <nav className="space-y-1">
+            {menuItems.map(({ key, label, icon: Icon }) => {
+              const isActive = active === key;
 
-          <SheetContent side="left" className="p-0 w-full max-w-full">
-            <SidebarUI />
-          </SheetContent>
-        </Sheet>
-      </div>
+              return (
+                <div
+                  key={key}
+                  onClick={() => {
+                    navigate(`/${key}`);
+                  }}
+                  className={`flex items-center gap-4 px-2 py-2 rounded-lg cursor-pointer
+                    transition-all duration-200
+                    ${isActive
+                      ? "text-white"
+                      : "text-gray-400 hover:text-white"
+                    }`}
+                >
+                  <div
+                    className={`p-2 rounded-md flex items-center justify-center
+                      ${isActive
+                        ? "bg-[linear-gradient(45deg,_rgba(130,175,255,0.25)_40%,_rgba(184,164,249,0.25)_120%)] shadow-[0_0_18px_#82AFFF88]"
+                        : ""
+                      }`}
+                  >
+                    <Icon size={18} />
+                  </div>
+
+                  {isOpen && (
+                    <span className="text-sm font-medium">
+                      {label}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center gap-4 px-2 py-2 text-gray-400 hover:text-white cursor-pointer transition">
+            <div className="p-2 rounded-md">
+              <LogOut size={18} />
+            </div>
+            {isOpen && <span className="text-sm">Log Out</span>}
+          </div>
+
+          <div className="flex items-center gap-4 px-2">
+            <img
+              src="https://i.pravatar.cc/40"
+              alt="profile"
+              className="w-8 h-8 rounded-full object-cover border border-[#82AFFF]"
+            />
+            {isOpen && (
+              <span className="text-sm text-gray-300">
+                Profile
+              </span>
+            )}
+          </div>
+        </div>
+      </aside>
     </>
   );
 }

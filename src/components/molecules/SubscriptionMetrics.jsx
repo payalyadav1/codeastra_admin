@@ -15,41 +15,43 @@ const stats = [
   {
     title: "2,340",
     subtitle: "Total Subscribers",
-    icon: FaUsers ,
+    icon: FaUsers,
     bg: "bg-[#a5b4fc]",
   },
   {
     title: "₹72,000",
     subtitle: "Avg. Revenue / Monthly",
-    icon: FaIndianRupeeSign ,
+    icon: FaIndianRupeeSign,
     bg: "bg-[#ff91cf]",
   },
   {
     title: "18 users",
     subtitle: "Expiring Soon",
-    icon: FaClock ,
+    icon: FaClock,
     bg: "bg-[#93e9be]",
   },
 ];
 
 export default function SubscriptionMetrics() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 ml-10  mr-10 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 px-4 sm:px-6 lg:px-10">
       {stats.map((item, index) => {
         const Icon = item.icon;
         return (
           <Card
             key={index}
-            className={`${item.bg} border-none rounded-2xl`}
+            className={`${item.bg} border-none rounded-2xl shadow-md hover:shadow-xl transition`}
           >
-            <CardContent className="p-5 flex flex-col gap-3 -mt-4">
-              <Icon className="w-6 h-6 text-white" />
+            <CardContent className="p-5 flex flex-col gap-3 items-start">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black/20">
+                <Icon className="w-6 h-6 text-white" />
+              </div>
 
-              <h2 className="text-2xl font-bold text-black ">
+              <h2 className="text-xl sm:text-2xl font-bold text-black">
                 {item.title}
               </h2>
 
-              <p className="text-sm text-black -mt-2">
+              <p className="text-sm text-black">
                 {item.subtitle}
               </p>
             </CardContent>

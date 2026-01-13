@@ -17,22 +17,18 @@ export default function LoginForm() {
 
   return (
     <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-12 lg:px-16 xl:px-24 py-8 lg:py-0">
-      {/* Logo */}
       <div className="mb-8 lg:mb-12">
         <div className="flex items-center gap-1">
         <img src={code} alt="codeastra logo" className="h-20 w-50"/>
         </div>
       </div>
 
-      {/* Login Title */}
       <div className="mb-6 lg:mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Login</h1>
         <p className="text-gray-500 text-sm sm:text-base">Login to access your admin account</p>
       </div>
 
-      {/* Form */}
       <div className="space-y-5 max-w-md">
-        {/* Email Input */}
         <div className="space-y-2">
           <Label htmlFor="email" className="text-gray-600 text-sm">Email</Label>
           <Input
@@ -45,7 +41,6 @@ export default function LoginForm() {
           />
         </div>
 
-        {/* Password Input */}
         <div className="space-y-2">
           <Label htmlFor="password" className="text-gray-600 text-sm">Password</Label>
           <div className="relative">
@@ -66,7 +61,6 @@ export default function LoginForm() {
           </div>
         </div>
 
-        {/* Remember Me & Forgot Password */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Checkbox
@@ -84,21 +78,17 @@ export default function LoginForm() {
           </button>
         </div>
 
-        {/* Login Button */}
         <Button className="w-full h-12  ] text-white rounded-lg text-base font-medium">
           Login to Dashboard
         </Button>
 
-        {/* Divider */}
         <div className="flex items-center gap-4 my-6">
           <div className="flex-1 h-px bg-gray-200"></div>
           <span className="text-gray-400 text-sm">Or login with</span>
           <div className="flex-1 h-px bg-gray-200"></div>
         </div>
 
-        {/* Social Login Buttons */}
         <div className="grid grid-cols-3 gap-3">
-          {/* Facebook */}
           <Button
             variant="outline"
             className="h-12 border-black  rounded-lg"
@@ -106,7 +96,6 @@ export default function LoginForm() {
             <FaFacebook/>
           </Button>
           
-          {/* Google */}
           <Button
             variant="outline"
             className="h-12 border-black  rounded-lg"
@@ -114,7 +103,6 @@ export default function LoginForm() {
            <FcGoogle />
           </Button>
           
-          {/* Apple */}
           <Button
             variant="outline"
             className="h-12 border-black  rounded-lg"

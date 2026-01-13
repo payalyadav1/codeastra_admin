@@ -18,7 +18,7 @@ const data = [
 
 export default function ActiveSubscribersChart() {
   return (
-    <Card className="rounded-2xl shadow-lg ml-8 mt-5">
+    <Card className=" w-full rounded-2xl shadow-lg   mt-5">
       <CardHeader>
         <CardTitle className="text-xl font-bold">
           Active Subscribers per Plan
