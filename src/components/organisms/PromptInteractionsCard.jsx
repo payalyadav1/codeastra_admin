@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { FaUser } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const PromptInteractionsCard = () => {
+   const navigate = useNavigate();
   return (
     <div className="w-full  p-4">
       <Card className="w-full  border border-gray-200 ">
@@ -94,7 +96,8 @@ const PromptInteractionsCard = () => {
           </div>
 
 
-            <Button  className=" h-12 w-55 mt-2 bg-black text-white text-md">
+            <Button  onClick={() => navigate("/fullchat")}
+              className=" h-12 w-55 mt-2 bg-black text-white text-md">
               View Full Chat History
             </Button>
         </CardContent>

@@ -1,8 +1,11 @@
 import React from "react";
 import { Download } from "lucide-react";
 import { BsCalendar4 } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const TransactionHistory = () => {
+    const navigate = useNavigate();
+
   const data = [
     {
       date: "12 Nov 2024",
@@ -43,7 +46,8 @@ const TransactionHistory = () => {
             <option>All Months</option>
           </select>
 
-          <button className="px-3 py-1 text-md border rounded-md bg-black text-white">
+          <button  onClick={() => navigate("/history")}
+           className="px-3 py-1 text-md border rounded-md bg-black text-white">
             View all
           </button>
 

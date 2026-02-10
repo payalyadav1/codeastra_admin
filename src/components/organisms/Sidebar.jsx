@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const menuItems = [
   { key: "dashboard", label: "Dashboard", icon: Home },
-  { key: "management", label: "User", icon: Users },
+  { key: "usermanagement", label: "User", icon: Users },
   { key: "analytics", label: "Analytics", icon: BarChart2 },
   { key: "leads", label: "Leads", icon: Mail },
   { key: "subscription", label: "Reports", icon: Notebook },
@@ -27,6 +27,7 @@ const menuItems = [
 export default function Sidebar({ active }) {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(true);
+
 
   return (
     <>
@@ -115,7 +116,7 @@ export default function Sidebar({ active }) {
               className="w-8 h-8 rounded-full object-cover border border-[#82AFFF]"
             />
             {isOpen && (
-              <span className="text-sm text-gray-300">
+              <span onClick={() => navigate("/adminprofile")} className="text-sm text-gray-300">
                 Profile
               </span>
             )}

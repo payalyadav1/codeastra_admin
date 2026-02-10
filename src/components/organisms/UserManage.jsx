@@ -201,7 +201,7 @@ export default function UserManage() {
                   </TableCell>
 
                   <TableCell className="space-x-2">
-                    <Button size="sm" variant="outline" className='border-2 border-black'>View</Button>
+                    <Button  onClick={() => navigate("/management")}  size="sm" variant="outline" className='border-2 border-black'>View</Button>
                     {status === "blocked" ? (
                       <Button size="sm" variant="ghost" className="text-green-600">
                         Unblock

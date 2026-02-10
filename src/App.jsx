@@ -9,6 +9,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AddUserForm from './components/organisms/AddUserForm '
 import Projects from './components/template/Projects'
 import UserManagement from './components/template/UserManagement'
+import FullChatHistory from './components/template/FullChatHistory'
+import Adrninprofile from './components/template/Adrninprofile'
+import History from './components/template/History'
+import EditProfile from './components/organisms/EditProfile'
+import TransactionDetails from './components/template/TransactionDetails'
 
 
 const App = () => {
@@ -28,6 +33,11 @@ const App = () => {
           <Route path="/Addfrom" element={<AddUserForm />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/usermanagement" element={<UserManagement />} />
+          <Route path="/fullchat" element={<FullChatHistory/>}/>
+          <Route path="/adminprofile" element={<Adrninprofile/>}/>
+          <Route path="/history" element={<History/>}/>
+          <Route path="/editprofile" element={<EditProfile />} />
+          <Route path="/transactiondetails" element={<TransactionDetails />} />
      
         </Routes>
       </BrowserRouter>
