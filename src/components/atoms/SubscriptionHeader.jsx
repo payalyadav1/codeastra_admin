@@ -1,7 +1,11 @@
 import React from "react";
 import { Plus, RefreshCw, Settings } from "lucide-react";
+import SubscriptionPlanDialog from "../organisms/AddNewSubscriptionPlan";
+import { useState } from "react";
 
 export default function SubscriptionHeader() {
+    const [open, setOpen] = useState(false)
+
   return (
     <div className="w-full flex flex-col gap-6 px-4 sm:px-6 lg:px-10 mt-6">
 
@@ -17,7 +21,8 @@ export default function SubscriptionHeader() {
 
       <div className="flex flex-col sm:flex-row gap-3 sm:justify-end items-center">
 
-        <button className="w-48 sm:w-auto flex items-center justify-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-900 transition">
+        <button  onClick={() => setOpen(true)}
+         className="w-48 sm:w-auto flex items-center justify-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-900 transition">
           <Plus size={16} />
           Add New Plan
         </button>
@@ -33,6 +38,9 @@ export default function SubscriptionHeader() {
         </button>
 
       </div>
+      <SubscriptionPlanDialog open={open} setOpen={setOpen} />
+
     </div>
+    
   );
 }

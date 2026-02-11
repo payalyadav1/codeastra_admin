@@ -14,6 +14,7 @@ import Adrninprofile from './components/template/Adrninprofile'
 import History from './components/template/History'
 import EditProfile from './components/organisms/EditProfile'
 import TransactionDetails from './components/template/TransactionDetails'
+import AddNewSubscriptionPlan from './components/organisms/AddNewSubscriptionPlan'
 
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/history" element={<History/>}/>
           <Route path="/editprofile" element={<EditProfile />} />
           <Route path="/transactiondetails" element={<TransactionDetails />} />
+          <Route path="/addnewsubscriptionplan" element={<AddNewSubscriptionPlan />} />
      
         </Routes>
       </BrowserRouter>
